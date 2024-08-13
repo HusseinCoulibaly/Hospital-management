@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter une Consultation</title>
+    <link rel="stylesheet" href="cons.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Enregistrer une Consultation</h2>
+        <form id="consultationForm">
+            <label for="medicalRecordNumber">Numéro de Dossier Médical:</label>
+            <input type="text" id="medicalRecordNumber" name="medicalRecordNumber" required>
+            
+            <label for="doctorId">ID du Médecin:</label>
+            <input type="text" id="doctorId" name="doctorId" required>
+            
+            <label for="dateOfVisit">Date de la Consultation:</label>
+            <input type="date" id="dateOfVisit" name="dateOfVisit" required>
+            
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes" required></textarea>
+            
+            <button type="submit">Enregistrer</button>
+        </form>
+        <div id="response"></div>
+        
+        <h2>Historique des consultations et traitements</h2>
+        <div class="history-buttons">
+            <form id="consultationHistoryForm">
+                <label for="treatmentMedicalRecordNumber">Numéro de Dossier Médical:</label>
+                <input type="text" id="treatmentMedicalRecordNumber" name="treatmentMedicalRecordNumber" required>
+                <button type="submit" class="history-button">Consultations</button>
+           
+                <button type="submit" class="history-button">Traitements</button>
+            </form>
+        </div>
+        <div id="history"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="consultationForm.js"></script>
+</body>
+</html>

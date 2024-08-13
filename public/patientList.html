@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Patients</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ajoute ton CSS personnalisé ici -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="patientList.js" defer></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Fusionne les bordures pour un style propre */
+        }
+
+        th, td {
+            padding: 15px; /* Ajoute de l'espace à l'intérieur des cellules */
+            text-align: left; /* Aligne le texte à gauche */
+            border-bottom: 1px solid #ddd; /* Ajoute une bordure en bas des cellules */
+        }
+
+        th {
+            background-color: #f2f2f2; /* Couleur de fond pour les en-têtes */
+            font-weight: bold; /* Met en gras les en-têtes */
+        }
+    </style>
+</head>
+<body>
+    <h1>Liste des Patients</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Patient</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Date de Naissance</th>
+                <th>Genre</th>
+                <th>Contact</th>
+                <th>Adresse</th>
+            </tr>
+        </thead>
+        <tbody id="patientList">
+            <!-- Les données des patients seront insérées ici -->
+        </tbody>
+    </table>
+</body>
+</html>
